@@ -1,9 +1,0 @@
-resource fd_haiku[fd]
-
-#openat$haiku_test(fd const[AT_FDCWD], file ptr[in, string["/dev/haiku-test-dev-0"]], flags flags[open_flags], mode const[0]) fd_haiku
-syz_open_dev$open_haiku(dev ptr[in, string["/dev/haiku-test-dev-#"]], id intptr, flags flags[open_flags]) fd_haiku
-
-#   const int FAIL_CONSTANTLY = 1;
-#   const int FAIL_3000_TIMES = 2;
-#ioctl$haiku_FAIL_CONSTANTLY(fd fd_haiku, cmd const[1], arg const[0])
-ioctl$haiku_FAIL_20_TIMES(fd fd_haiku, cmd int32[1:1])
